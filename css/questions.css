@@ -1,0 +1,21 @@
+.test-question{
+  margin:auto;
+  width: 100%;
+  max-width: 900px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.statement {
+  color:black;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+}
+.decision{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 15px;
+}
