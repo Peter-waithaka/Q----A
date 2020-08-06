@@ -96,43 +96,40 @@ a:hover {
   justify-content: center;
   margin: 15px 0 15px;
 }
-    #Introvert{
-      background-color: white;
-      border: 2px solid black;
-      margin-top: 20px;
-      margin-right: 20px;
-      padding: 3px;
-      text-align: justify;
-      position: relative;
-    }
-    #Observant{
-      background-color: white;
-      border: 2px solid black;
-      margin-top: 20px;
-      margin-right: 20px;
-      padding: 3px;
-      text-align: justify;
-      position: relative;
-    }
-    #Thinking{
-      background-color: white;
-      border: 2px solid black;
-      margin-top: 20px;
-      margin-right: 20px;
-      padding: 3px;
-      text-align: justify;
-      position: relative;
-    }
-    #Judging {
-    background-color: white;
-    border: 2px solid black;
-    margin-top: 20px;
-    margin-right: 20px;
-    padding: 3px;
-    text-align: justify;
-    position: relative;
-    }
-  .results {
-    display: none;
-  }
+#Introvert{
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+#Observant{
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+#Thinking{
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+#Judging {
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
 }
