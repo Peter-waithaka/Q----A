@@ -1,0 +1,135 @@
+.test{
+  background-image: url('../images/pure-black-background-f82588d3.jpg');
+  border-radius: 50px;
+}
+.statement {
+  color:white;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+  background-color:#4CAF50;
+  font-size: 20px;
+  padding: 20px;
+  border-radius:5%;
+  margin: auto;
+  width: 100%;
+  max-width:700px ;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.decision{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 15px;
+  font-size: 20px;
+  color: white;
+}
+.decision input[type=radio] {
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color:#4CAF50;
+  color:white ;
+  font-size: 30px;
+  margin: 200px;
+}
+.previous:hover{
+  background-color: greenyellow;
+}
+.next {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 30px;
+  margin: 200px;
+}
+.next:hover {
+  background-color: greenyellow;
+}
+.round {
+  border-radius: 50%;
+}
+#resultsButton {
+  background-color:#4CAF50;
+  border-radius:10% ;
+  font-size:30px;
+  margin-top: 5px;
+  margin-left:500px;
+}
+#results {
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+@media only screen and (max-width: 767px){
+.test-question{
+  margin:auto;
+  width: 100%;
+  max-width: 900px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.statement {
+  color:black;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+}
+.decision{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 15px;
+}
+#Introvert{
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+#Observant{
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+#Thinking{
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+#Judging {
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  text-align: justify;
+  position: relative;
+}
+}
