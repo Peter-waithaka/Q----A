@@ -17,6 +17,8 @@
   font-size: 20px;
   padding: 20px;
   border-radius:5%;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 .decision{
   display: flex;
@@ -24,6 +26,10 @@
   justify-content: center;
   margin: 15px 0 15px;
   font-size: 20px;
+}
+input[type=radio]:not(old) {
+  background-color: green;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -48,4 +54,15 @@ a:hover {
 
 .round {
   border-radius: 50%;
+}
+#resultsButton {
+  background-color:#4CAF50;
+  border-radius:10% ;
+  font-size:30px;
+  margin-top: 5px;
+}
+#results {
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
 }
