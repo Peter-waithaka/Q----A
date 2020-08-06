@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title></title>
     <script src="js/scripts1.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -13,11 +14,20 @@
     <div id="work">
       <h1 class="h1 text-capitalize text-center font-weight-bolder text-white">fill in to find you personality</h1>
    <div class="test-question comp">
+
+    <link rel="stylesheet" href="css/questions.css">
+    <script src="js/scripts1.js"></script>
+    <title>Personality Quiz</title>
+  </head>
+  <body>
+  <div class="test-question comp">
+    <div class="test">
+
      <!--Introvert/extrovert questions-->
     <div id = "Introvert">
       <p class="statement">You enjoy vibrant social events will lots of people.</p>
       <!--strongly disagree is an introvert-->
-      <form class="decision">
+      <form name= "myForm" class="decision">
         <input type="radio" name="socialEvents" id="SA" value="2" required onclick="introversion()"> Strongly agree
         <input type="radio" name="socialEvents" id="A" value="1" required onclick="introversion()"> Agree
         <input type="radio" name="socialEvents" id="N" value="0" required onclick="introversion()"> Neutral
@@ -59,7 +69,8 @@
         <input type="radio" name="publicAreas" id="N"  value="0" required onclick="introversion()" > Neutral
         <input type="radio" name="publicAreas" id="D"  value="1" required onclick="introversion()" > Disagree
         <input type="radio" name="publicAreas" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
-      </form>
+      </form>     
+
       <!-- <button type="button" onclick="introversion()">ok</button>
       <div class="introversionExtroversionTrait">
         <ul>
@@ -215,8 +226,14 @@
       <input type="radio" name="energyBursts" id="D" value="-1" required onclick="introversion()"> Disagree
       <input type="radio" name="energyBursts" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
+
     <!-- <button type="button" id="resultsButton text-center" onclick="introversion()">Get Results</button> -->
    
+
+    </div>
+    <button type="button" id="resultsButton" onclick="introversion()">Get Results</button>
+    </div>
+
     <div id="results">
       <h6 class="text text-center font-weight-bold">RESULTS</h6>
       <p>Your personality type is <span id="introExtroLetter"></span><span id="intuSensoLetter"></span><span id="thinkFeelLetter"></span><span id="judgeProsLetter"></span></p>
@@ -228,9 +245,6 @@
       <p id="thinkingFeelingTrait"></p>
       <p></p>
       <p id="judgingProspectingTrait"></p>
-        
-      
-    </div>
     </div>
     </div>
   </div>
