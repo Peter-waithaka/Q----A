@@ -74,8 +74,7 @@ a:hover {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 20px;
 }
-<<<<<<< HEAD
-=======
+
 @media only screen and (max-width: 767px){
 .test-question{
   margin:auto;
@@ -138,4 +137,3 @@ a:hover {
     display: none;
   }
 }
->>>>>>> origin/styles
