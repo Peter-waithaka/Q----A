@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/questions.css">
+    <script src="js/scripts1.js"></script>
     <style media="screen">
     .test-question{
       margin:auto;
@@ -62,6 +63,9 @@
     text-align: justify;
     position: relative;
     }
+  .results {
+    display: none;
+  }
 
     </style>
     <title></title>
@@ -70,195 +74,221 @@
    <div class="test-question comp">
      <!--Introvert/extrovert questions-->
     <div id = "Introvert">
-    <p class="statement">You enjoy vibrant social events will lots of people.</p>
-    <!--strongly disagree is an introvert-->
-    <form class="decision">
-     <input type="checkbox" name="event" value="SA"> Strongly agree
-     <input type="checkbox" name="event" value="A"> Agree
-     <input type="checkbox" name="event" value="N"> Neutral
-     <input type="checkbox" name="event" value="D"> Disagree
-     <input type="checkbox" name="event" value="SD"> Strongly Disagre
-    </form>
-    <p class="statement">At parties and similar events you can mostly be found farther away from the action.</p>
-    <!--strongly agree is an introvert-->
-    <form class="decision">
-     <input type="checkbox" name="ideas" value="SA"> Strongly agree
-     <input type="checkbox" name="ideas" value="A"> Agree
-     <input type="checkbox" name="ideas" value="N"> Neutral
-     <input type="checkbox" name="ideas" value="D"> Disagree
-     <input type="checkbox" name="ideas" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">When in a group of people you do not know, you have no problem jumping right into their conversation.</p>
-    <!--strongly disagree is an introvert-->
-    <form class="decision">
-     <input type="checkbox"name="emotional" value="SA"> Strongly agree
-     <input type="checkbox"name="emotional" value="A"> Agree
-     <input type="checkbox"name="emotional" value="N"> Neutral
-     <input type="checkbox"name="emotional" value="D"> Disagree
-     <input type="checkbox"name="emotional" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">You feel more drawn to places with a busting and busy atmosphere than to a more quiet and intimate ones.</p>
-    <!--strongly disagree is an introvert-->
-    <form class="decision class="decision"">
-     <input type="checkbox" name="conversation" value="SA"> Strongly agree
-     <input type="checkbox" name="conversation" value="A"> Agree
-     <input type="checkbox" name="conversation" value="N"> Neutral
-     <input type="checkbox" name="conversation" value="D"> Disagree
-     <input type="checkbox" name="conversation" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">When in a public place,you usually stick to quieter and less crowded areas.</p>
-    <!--strongly agree is an introvert-->
-    <form class="decision">
-     <input type="checkbox" name="impression" value="SA"> Strongly agree
-     <input type="checkbox" name="impression" value="A"> Agree
-     <input type="checkbox" name="impression" value="N"> Neutral
-     <input type="checkbox" name="impression" value="D"> Disagree
-     <input type="checkbox" name="impression" value="SD"> Strongly Disagree
-    </form>
+      <p class="statement">You enjoy vibrant social events will lots of people.</p>
+      <!--strongly disagree is an introvert-->
+      <form class="decision">
+        <input type="radio" name="socialEvents" id="SA" value="2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="socialEvents" id="A" value="1" required onclick="introversion()"> Agree
+        <input type="radio" name="socialEvents" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="socialEvents" id="D" value="-1" required onclick="introversion()"> Disagree
+        <input type="radio" name="socialEvents" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">At parties and similar events you can mostly be found farther away from the action.</p>
+      <!--strongly agree is an introvert-->
+      <form class="decision">
+        <input type="radio" name="ideas" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="ideas" id="A" value="-1" required onclick="introversion()"> Agree
+        <input type="radio" name="ideas" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="ideas" id="D" value="1" required onclick="introversion()"> Disagree
+        <input type="radio" name="ideas" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">When in a group of people you do not know, you have no problem jumping right into their conversation.</p>
+      <!--strongly disagree is an introvert-->
+      <form class="decision">
+        <input type="radio" name="easyConversations" id="SA" value="2"required onclick="introversion()"> Strongly agree
+        <input type="radio" name="easyConversations" id="A" value="1" required onclick="introversion()"> Agree
+        <input type="radio" name="easyConversations" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="easyConversations" id="D" value="-1" required onclick="introversion()"> Disagree
+        <input type="radio" name="easyConversations" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">You feel more drawn to places with a busting and busy atmosphere than to a more quiet and intimate ones.</p>
+      <!--strongly disagree is an introvert-->
+      <form class="decision">
+        <input type="radio" name="atmospheres" id="SA" value="2" required onclick="introversion()" > Strongly agree
+        <input type="radio" name="atmospheres" id="A"  value="1" required onclick="introversion()" > Agree
+        <input type="radio" name="atmospheres" id="N"  value="0" required onclick="introversion()" > Neutral
+        <input type="radio" name="atmospheres" id="D" value="-1" required onclick="introversion()" > Disagree
+        <input type="radio" name="atmospheres" id="SD" value="-2" required onclick="introversion()" > Strongly Disagree
+      </form>
+      <p class="statement">When in a public place,you usually stick to quieter and less crowded areas.</p>
+      <!--strongly agree is an introvert-->
+      <form class="decision">
+        <input type="radio" name="publicAreas" id="SA" value="-2" required onclick="introversion()" > Strongly agree
+        <input type="radio" name="publicAreas" id="A" value="-1" required onclick="introversion()" > Agree
+        <input type="radio" name="publicAreas" id="N"  value="0" required onclick="introversion()" > Neutral
+        <input type="radio" name="publicAreas" id="D"  value="1" required onclick="introversion()" > Disagree
+        <input type="radio" name="publicAreas" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <!-- <button type="button" onclick="introversion()">ok</button>
+      <div class="introversionExtroversionTrait">
+        <ul>
+          <li id="socialEventResult"></li>
+          <li id="ideaResult"></li>
+          <li id="easyConversationResult"></li>
+          <li id="atmosphereResult"></li>
+          <li id="publicAreaResult"></li>
+          <li id="introvertOrNot"></li>
+        </ul>
+      </di  v> -->
     </div>
     <!--Intuitive/Observant questions-->
     <div id= "Observant">
-    <p class="statement">You often spend time exploring unrealistic yet intriging ideas.</p>
-    <!--strongly disagree is Observant-->
-    <form class="decision">
-     <input type="checkbox" name="affection" value="SA"> Strongly agree
-     <input type="checkbox" name="affection" value="A"> Agree
-     <input type="checkbox" name="affection" value="N"> Neutral
-     <input type="checkbox" name="affection" value="D"> Disagree
-     <input type="checkbox" name="affection" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">You like discussing different views and theories on what the world would look like in the future.</p>
-    <!--strongly disagree is Observant-->
-    <form class="decision">
-     <input type="checkbox" name="approach" value="SA"> Strongly agree
-     <input type="checkbox" name="approach" value="A"> Agree
-     <input type="checkbox" name="approach" value="N"> Neutral
-     <input type="checkbox" name="approach" value="D"> Disagree
-     <input type="checkbox" name="approach" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">You often drift away into day daydreaming about various ideas or scenarios.</p>
-    <!--strongly disagree is Observant-->
-    <form class="decision">
-     <input type="checkbox" name="party" value="SA"> Strongly agree
-     <input type="checkbox" name="party" value="A"> Agree
-     <input type="checkbox" name="party" value="N"> Neutral
-     <input type="checkbox" name="party" value="D"> Disagree
-     <input type="checkbox" name="party" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">You see yourself as more of a realist than a visionary.</p>
-    <!--strongly agree is Observant-->
-    <form class="decision">
-     <input type="checkbox" name="relations" value="SA"> Strongly agree
-     <input type="checkbox" name="relations" value="A"> Agree
-     <input type="checkbox" name="relations" value="N"> Neutral
-     <input type="checkbox" name="relations" value="D"> Disagree
-     <input type="checkbox" name="relations" value="SD"> Strongly Disagree
-    </form>
-    <p class="statement">You frequently find yourself wondering how technological advancement could change everyday life.</p>
-    <!--strongly disagree is Observant-->
-    <form class="decision">
-     <input type="checkbox" name="jump into conversations" value="SA"> Strongly agree
-     <input type="checkbox" name="jump into conversations" value="A"> Agree
-     <input type="checkbox" name="jump into conversations" value="N"> Neutral
-     <input type="checkbox" name="jump into conversations" value="D"> Disagree
-     <input type="checkbox" name="jump into conversations" value="SD"> Strongly Disagree
-    </form>
+      <p class="statement">You often spend time exploring unrealistic yet intriguing ideas.</p>
+      <!--strongly disagree is Observant-->
+      <form class="decision">
+        <input type="radio" name="intrigues" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="intrigues" id="A" value="-1" required onclick="introversion()"> Agree
+        <input type="radio" name="intrigues" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="intrigues" id="D" value="1" required onclick="introversion()"> Disagree
+        <input type="radio" name="intrigues" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">You like discussing different views and theories on what the world would look like in the future.</p>
+      <!--strongly disagree is Observant-->
+      <form class="decision">
+        <input type="radio" name="futuristicViews" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="futuristicViews" id="A" value="-1" required onclick="introversion()"> Agree
+        <input type="radio" name="futuristicViews" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="futuristicViews" id="D" value="1" required onclick="introversion()"> Disagree
+        <input type="radio" name="futuristicViews" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">You often drift away into day daydreaming about various ideas or scenarios.</p>
+      <!--strongly disagree is Observant-->
+      <form class="decision">
+        <input type="radio" name="dayDreams" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="dayDreams" id="A" value="-1" required onclick="introversion()"> Agree
+        <input type="radio" name="dayDreams" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="dayDreams" id="D" value="1" required onclick="introversion()"> Disagree
+        <input type="radio" name="dayDreams" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">You see yourself as more of a realist than a visionary.</p>
+      <!--strongly agree is Observant-->
+      <form class="decision">
+        <input type="radio" name="realists" id="SA" value="2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="realists" id="A" value="1" required onclick="introversion()"> Agree
+        <input type="radio" name="realists" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="realists" id="D" value="-1" required onclick="introversion()"> Disagree
+        <input type="radio" name="realists" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
+      </form>
+      <p class="statement">You frequently find yourself wondering how technological advancement could change everyday life.</p>
+      <!--strongly disagree is Observant-->
+      <form class="decision">
+        <input type="radio" name="techAdvancements" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+        <input type="radio" name="techAdvancements" id="A" value="-1" required onclick="introversion()"> Agree
+        <input type="radio" name="techAdvancements" id="N" value="0" required onclick="introversion()"> Neutral
+        <input type="radio" name="techAdvancements" id="D" value="1" required onclick="introversion()"> Disagree
+        <input type="radio" name="techAdvancements" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
+      </form>
     </div>
     <!--Feeling/Thinking questions-->
     <div id="Thinking">
     <p class="statement">When it comes to making life-changing choices,you mostly listen to your heart rather than your head.</p>
     <!--strongly disagree is Thinking-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+     <input type="radio" name="followHearts" id="SA"  value="2" required onclick="introversion()"> Strongly agree
+     <input type="radio" name="followHearts" id="A" value="1" required onclick="introversion()"> Agree
+     <input type="radio" name="followHearts" id="N" value="0" required onclick="introversion()"> Neutral
+     <input type="radio" name="followHearts" id="D" value="-1" required onclick="introversion()"> Disagree
+     <input type="radio" name="followHearts" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">You often make decisions on a whim.</p>
     <!--strongly disagree is Thinking-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+     <input type="radio" name="whims" id="SA" value="2" required onclick="introversion()"> Strongly agree
+     <input type="radio" name="whims" id="A" value="1" required onclick="introversion()"> Agree
+     <input type="radio" name="whims" id="N" value="0" required onclick="introversion()"> Neutral
+     <input type="radio" name="whims" id="D" value="-1" required onclick="introversion()"> Disagree
+     <input type="radio" name="whims" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">You often have a hard time understanding other people's feelings.</p>
     <!--strongly disagree is Thinking-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+     <input type="radio" name="feelings" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+     <input type="radio" name="feelings" id="A" value="-1" required onclick="introversion()"> Agree
+     <input type="radio" name="feelings" id="N" value="0" required onclick="introversion()"> Neutral
+     <input type="radio" name="feelings" id="D" value="1" required onclick="introversion()"> Disagree
+     <input type="radio" name="feelings" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">Your emotions control you more than you control them.</p>
     <!--strongly disagree is Thinking-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+     <input type="radio" name="emotions" id="SA" value="2" required onclick="introversion()"> Strongly agree
+     <input type="radio" name="emotions" id="A" value="1" required onclick="introversion()"> Agree
+     <input type="radio" name="emotions" id="N" value="0" required onclick="introversion()"> Neutral
+     <input type="radio" name="emotions" id="D" value="-1" required onclick="introversion()"> Disagree
+     <input type="radio" name="emotions" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">You still honor the commitments you have made even if you have a change of heart.</p>
     <!--strongly disagree is Thinking-->
-    <form class="decision class="decision"">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+    <form class="decision">
+     <input type="radio" name="commitments" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+     <input type="radio" name="commitments" id="A" value="-1" required onclick="introversion()"> Agree
+     <input type="radio" name="commitments" id="N" value="0" required onclick="introversion()"> Neutral
+     <input type="radio" name="commitments" id="D" value="1" required onclick="introversion()"> Disagree
+     <input type="radio" name="commitments" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
     </form>
     </div>
     <!--Judging/Prospecting questions-->
     <div id="Judging">
     <p class="statement">Your travel plans are more likely to look like a rough list of ideas than a detailed itinerary.</p>
     <!--strongly disagree is Judging-->
-    <form class="decision class="decision"">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+    <form class="decision">
+      <input type="radio" name="travelPlans" id="SA" value="2" required onclick="introversion()"> Strongly agree
+      <input type="radio" name="travelPlans" id="A" value="1" required onclick="introversion()"> Agree
+      <input type="radio" name="travelPlans" id="N" value="0" required onclick="introversion()"> Neutral
+      <input type="radio" name="travelPlans" id="D" value="-1" required onclick="introversion()"> Disagree
+      <input type="radio" name="travelPlans" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">If you have to temporarily put your plans on hold,you make sure it is your top priority to get back on track as soon as possible.</p>
     <!--strongly agree is Judging-->
-    <form class="decision class="decision"">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+    <form class="decision">
+      <input type="radio" name="priorities" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+      <input type="radio" name="priorities" id="A" value="-1" required onclick="introversion()"> Agree
+      <input type="radio" name="priorities" id="N" value="0" required onclick="introversion()"> Neutral
+      <input type="radio" name="priorities" id="D" value="1" required onclick="introversion()"> Disagree
+      <input type="radio" name="priorities" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">When starting to work on a project, you prefer to make as many decisions upfront as possible.</p>
     <!--strongly agree is Judging-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+      <input type="radio" name="projectDecisions" id="SA" value="-2" required onclick="introversion()"> Strongly agree
+      <input type="radio" name="projectDecisions" id="A" value="-1" required onclick="introversion()"> Agree
+      <input type="radio" name="projectDecisions" id="N" value="0" required onclick="introversion()"> Neutral
+      <input type="radio" name="projectDecisions" id="D" value="1" required onclick="introversion()"> Disagree
+      <input type="radio" name="projectDecisions" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">Even when you have planned a particular daily routine, you usually just end up doing what you feel like at any given moment.</p>
     <!--strongly disagree is Judging-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+      <input type="radio" name="dailyPlans" id="SA" value="2" required onclick="introversion()"> Strongly agree
+      <input type="radio" name="dailyPlans" id="A" value="1" required onclick="introversion()">  Agree
+      <input type="radio" name="dailyPlans" id="N" value="0" required onclick="introversion()"> Neutral
+      <input type="radio" name="dailyPlans" id="D" value="-1" required onclick="introversion()"> Disagree
+      <input type="radio" name="dailyPlans" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
     <p class="statement">Your personal work style is closer to spontaneous bursts of energy than to organised and consistent efforts.</p>
     <!--strongly disagree is Judging-->
     <form class="decision">
-     <input type="checkbox" name="" value="SA"> Strongly agree
-     <input type="checkbox" name="" value="A"> Agree
-     <input type="checkbox" name="" value="N"> Neutral
-     <input type="checkbox" name="" value="D"> Disagree
-     <input type="checkbox" name="" value="SD"> Strongly Disagree
+      <input type="radio" name="energyBursts" id="SA" value="2" required onclick="introversion()"> Strongly agree
+      <input type="radio" name="energyBursts" id="A" value="1" required onclick="introversion()"> Agree
+      <input type="radio" name="energyBursts" id="N" value="0" required onclick="introversion()"> Neutral
+      <input type="radio" name="energyBursts" id="D" value="-1" required onclick="introversion()"> Disagree
+      <input type="radio" name="energyBursts" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
+    <button type="button" id="resultsButton" onclick="introversion()">Get Results</button>
+    <div id="results">
+      <h>RESULTS</h>
+      <p>Your personality type is <span id="introExtroLetter"></span><span id="intuSensoLetter"></span><span id="thinkFeelLetter"></span><span id="judgeProsLetter"></span></p>
+      <p></p>
+      <p id="introversionExtroversionTrait"></p>
+      <p></p>
+      <p id="intuitiveSensoryTrait"></p>
+      <p></p>
+      <p id="thinkingFeelingTrait"></p>
+      <p></p>
+      <p id="judgingProspectingTrait"></p>
+        
+      
+    </div>
     </div>
     </div>
   </body>
