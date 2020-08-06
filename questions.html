@@ -5,78 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/questions.css">
     <script src="js/scripts1.js"></script>
-    <style media="screen">
-    .test-question{
-      margin:auto;
-      width: 100%;
-      max-width: 900px;
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .statement {
-      color:black;
-      font-weight: 900;
-      text-align: center;
-      line-height: 1.5;
-    }
-    .decision{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 15px 0 15px;
-    }
-    #Introvert{
-      background-color: white;
-      border: 2px solid black;
-      margin-top: 20px;
-      margin-right: 20px;
-      padding: 3px;
-      text-align: justify;
-      position: relative;
-    }
-    #Observant{
-      background-color: white;
-      border: 2px solid black;
-      margin-top: 20px;
-      margin-right: 20px;
-      padding: 3px;
-      text-align: justify;
-      position: relative;
-    }
-    #Thinking{
-      background-color: white;
-      border: 2px solid black;
-      margin-top: 20px;
-      margin-right: 20px;
-      padding: 3px;
-      text-align: justify;
-      position: relative;
-    }
-    #Judging {
-    background-color: white;
-    border: 2px solid black;
-    margin-top: 20px;
-    margin-right: 20px;
-    padding: 3px;
-    text-align: justify;
-    position: relative;
-    }
-  .results {
-    display: none;
-  }
-
-    </style>
-    <title></title>
+    <title>Personality Quiz</title>
   </head>
   <body>
-   <div class="test-question comp">
+  <div class="test-question comp">
+    <div class="test">
      <!--Introvert/extrovert questions-->
     <div id = "Introvert">
       <p class="statement">You enjoy vibrant social events will lots of people.</p>
       <!--strongly disagree is an introvert-->
-      <form class="decision">
+      <form name= "myForm" class="decision">
         <input type="radio" name="socialEvents" id="SA" value="2" required onclick="introversion()"> Strongly agree
         <input type="radio" name="socialEvents" id="A" value="1" required onclick="introversion()"> Agree
         <input type="radio" name="socialEvents" id="N" value="0" required onclick="introversion()"> Neutral
@@ -118,7 +56,8 @@
         <input type="radio" name="publicAreas" id="N"  value="0" required onclick="introversion()" > Neutral
         <input type="radio" name="publicAreas" id="D"  value="1" required onclick="introversion()" > Disagree
         <input type="radio" name="publicAreas" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
-      </form>
+      </form>     
+
       <!-- <button type="button" onclick="introversion()">ok</button>
       <div class="introversionExtroversionTrait">
         <ul>
@@ -274,7 +213,9 @@
       <input type="radio" name="energyBursts" id="D" value="-1" required onclick="introversion()"> Disagree
       <input type="radio" name="energyBursts" id="SD" value="-2" required onclick="introversion()"> Strongly Disagree
     </form>
+    </div>
     <button type="button" id="resultsButton" onclick="introversion()">Get Results</button>
+    </div>
     <div id="results">
       <h>RESULTS</h>
       <p>Your personality type is <span id="introExtroLetter"></span><span id="intuSensoLetter"></span><span id="thinkFeelLetter"></span><span id="judgeProsLetter"></span></p>
@@ -286,9 +227,6 @@
       <p id="thinkingFeelingTrait"></p>
       <p></p>
       <p id="judgingProspectingTrait"></p>
-        
-      
-    </div>
     </div>
     </div>
   </body>
