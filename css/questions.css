@@ -6,18 +6,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 .statement {
   color:black;
   font-weight: 900;
   text-align: center;
   line-height: 1.5;
+  background-color:#4CAF50;
+  font-size: 20px;
+  padding: 20px;
+  border-radius:5%;
 }
 .decision{
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 15px 0 15px;
+  font-size: 20px;
 }
 a {
   text-decoration: none;
