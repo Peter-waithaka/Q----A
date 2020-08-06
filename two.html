@@ -6,14 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/questions.css">
-    <script src="js/scripts1.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/scripts1.js"></script>
 
 </head>
 <body>
     <div id= "Observant">
-        <p class="statement">You often spend time exploring unrealistic yet intriguing ideas.</p>
+        <p class="statement"  >You often spend time exploring unrealistic yet intriguing ideas.</p>
         <!--strongly disagree is Observant-->
-        <form class="decision">
+        <form class="decision"method="GET" action="">
           <input type="radio" name="intrigues" id="SA" value="-2" required onclick="introversion()"> Strongly agree
           <input type="radio" name="intrigues" id="A" value="-1" required onclick="introversion()"> Agree
           <input type="radio" name="intrigues" id="N" value="0" required onclick="introversion()"> Neutral
@@ -22,14 +23,14 @@
         </form>
         <p class="statement">You like discussing different views and theories on what the world would look like in the future.</p>
         <!--strongly disagree is Observant-->
-        <form class="decision">
+        <form class="decision"method="GET" action="getmethod.php">
           <input type="radio" name="futuristicViews" id="SA" value="-2" required onclick="introversion()"> Strongly agree
           <input type="radio" name="futuristicViews" id="A" value="-1" required onclick="introversion()"> Agree
           <input type="radio" name="futuristicViews" id="N" value="0" required onclick="introversion()"> Neutral
           <input type="radio" name="futuristicViews" id="D" value="1" required onclick="introversion()"> Disagree
           <input type="radio" name="futuristicViews" id="SD" value="2" required onclick="introversion()"> Strongly Disagree
         </form>
-        <p class="statement">You often drift away into day daydreaming about various ideas or scenarios.</p>
+        <p class="statement" method="GET" action="getmethod.php">You often drift away into day daydreaming about various ideas or scenarios.</p>
         <!--strongly disagree is Observant-->
         <form class="decision">
           <input type="radio" name="dayDreams" id="SA" value="-2" required onclick="introversion()"> Strongly agree
@@ -40,7 +41,7 @@
         </form>
         <p class="statement">You see yourself as more of a realist than a visionary.</p>
         <!--strongly agree is Observant-->
-        <form class="decision">
+        <form class="decision" method="GET" action="getmethod.php">
           <input type="radio" name="realists" id="SA" value="2" required onclick="introversion()"> Strongly agree
           <input type="radio" name="realists" id="A" value="1" required onclick="introversion()"> Agree
           <input type="radio" name="realists" id="N" value="0" required onclick="introversion()"> Neutral
@@ -49,7 +50,7 @@
         </form>
         <p class="statement">You frequently find yourself wondering how technological advancement could change everyday life.</p>
         <!--strongly disagree is Observant-->
-        <form class="decision">
+        <form class="decision" method="GET" action="getmethod.php">
           <input type="radio" name="techAdvancements" id="SA" value="-2" required onclick="introversion()"> Strongly agree
           <input type="radio" name="techAdvancements" id="A" value="-1" required onclick="introversion()"> Agree
           <input type="radio" name="techAdvancements" id="N" value="0" required onclick="introversion()"> Neutral
