@@ -17,6 +17,8 @@
   font-size: 20px;
   padding: 20px;
   border-radius:5%;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 .decision{
   display: flex;
@@ -24,6 +26,10 @@
   justify-content: center;
   margin: 15px 0 15px;
   font-size: 20px;
+}
+input[type=radio]:not(old) {
+  background-color: green;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -49,52 +55,14 @@ a:hover {
 .round {
   border-radius: 50%;
 }
-#Introvert{
-  background-color: white;
-  border: 2px solid black;
-  margin-top: 20px;
-  margin-right: 20px;
-  padding: 3px;
-  text-align: justify;
-  position: relative;
-}
-#Observant{
-  background-color: white;
-  border: 2px solid black;
-  margin-top: 20px;
-  margin-right: 20px;
-  padding: 3px;
-  text-align: justify;
-  position: relative;
-}
-#Thinking{
-  background-color: white;
-  border: 2px solid black;
-  margin-top: 20px;
-  margin-right: 20px;
-  padding: 3px;
-  text-align: justify;
-  position: relative;
-}
-#Judging {
-background-color: white;
-border: 2px solid black;
-margin-top: 20px;
-margin-right: 20px;
-padding: 3px;
-text-align: justify;
-position: relative;
+#resultsButton {
+  background-color:#4CAF50;
+  border-radius:10% ;
+  font-size:30px;
+  margin-top: 5px;
 }
 #results {
-background-color: white;
-border: 2px solid black;
-margin-top: 20px;
-margin-right: 20px;
-padding: 3px;
-text-align: justify;
-position: relative
-
-}
-#work{
-background-color: green;
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
 }
