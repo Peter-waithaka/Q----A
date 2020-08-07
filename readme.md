@@ -37,4 +37,4 @@ You'll get to know yourself more and appreciate yourself
 
 
 ### Live to Link to the Website:
-* [Live Link]
+* [Live Link]https://peter-waithaka.github.io/Q----A/
