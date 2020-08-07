@@ -15,7 +15,7 @@ You'll get to know yourself more and appreciate yourself
 * HTML
 * JavaScript
 * CSS "bootstrap"
-* jQuery-() 
+* jQuery
 * GIT and GITHUB
 
 
@@ -34,7 +34,7 @@ You'll get to know yourself more and appreciate yourself
 * Once index.html is opened on browser the home page 
 
 * Second page is more about the quiz youll be taking 
-
+*You will receive feedback upon finishing the quiz
 
 ### Live to Link to the Website:
-* [Live Link]
+* [Live Link] https://peter-waithaka.github.io/Q----A/
